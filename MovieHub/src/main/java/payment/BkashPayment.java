@@ -1,6 +1,4 @@
-package Payment_Gateway;
-
-import java.util.Random;
+package payment;
 
 public class BkashPayment implements Payment{
     @Override
@@ -8,8 +6,7 @@ public class BkashPayment implements Payment{
         System.out.println("\nbKash payment is being processed...");
         System.out.println("Please wait...");
 
-        Random random = new Random();
-        int delay= random.nextInt(8)+3;
+        int delay = getProcessingDelay();
 
         try{
             Thread.sleep(delay * 1000L);
@@ -19,6 +16,6 @@ public class BkashPayment implements Payment{
             return;
         }
 
-        System.out.println("\nPayment completed for "+amount+" using bKash.");
+        System.out.println("\nPayment completed for "+ amount +" using bKash.");
     }
 }

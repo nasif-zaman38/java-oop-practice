@@ -1,4 +1,4 @@
-package Payment_Gateway;
+package payment;
 
 import java.util.Scanner;
 
@@ -44,12 +44,12 @@ public class Main {
         System.out.println("Payment method : "+paymentMethod);
 
         System.out.print("\nConfirm payment? (Y/N): ");
-        char confirm=sc.next().charAt(0);
+        String confirm=sc.next();
 
-        if(confirm=='Y' || confirm=='y'){
+        if(confirm.equalsIgnoreCase("Y")) {
             payment.pay(amount);
         }
-        else if(confirm=='N' || confirm=='n') {
+        else if(confirm.equalsIgnoreCase("N")) {
             System.out.println("Payment cancelled.");
         }
         else{

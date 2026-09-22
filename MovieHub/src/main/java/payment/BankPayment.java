@@ -1,17 +1,14 @@
-package Payment_Gateway;
+package payment;
 
-import java.util.Random;
-
-public class NagadPayment implements Payment{
+public class BankPayment implements Payment{
     @Override
     public void pay(double amount) {
-        System.out.println("\nNagad payment is being processed...");
+        System.out.println("\nBank payment is being processed...");
         System.out.println("Please wait...");
 
-        Random random = new Random();
-        int delay= random.nextInt(8)+3;
+        int delay = getProcessingDelay();
 
-        try{
+        try {
             Thread.sleep(delay * 1000L);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
@@ -19,7 +16,7 @@ public class NagadPayment implements Payment{
             return;
         }
 
-        System.out.println("\nPayment completed for "+amount+" using Nagad.");
+        System.out.println("\nPayment completed for "+ amount +" using Bank.");
 
     }
 }
