@@ -23,7 +23,7 @@ abstract class Vehicle {
         return totalVehicles;
     }
 
-    public final void displayVehicleInfo() {
+    public void displayVehicleInfo() {
         System.out.println("\nVehicle ID: " + vehicleId);
         System.out.println("Brand: " + brand);
         System.out.println("Rental Rate: " + rentalRate + " per day");

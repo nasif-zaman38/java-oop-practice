@@ -6,11 +6,11 @@ import static vrs.Vehicle.COMPANY_NAME;
 
 public class Main {
     static void main() {
-        Car car = new Car("C001", "Toyota", 3000);
-        Bike bike = new Bike("B001", "Honda", 1000);
-        Truck truck = new Truck("T001", "Ford", 5000);
-
         Scanner sc = new Scanner(System.in);
+
+        Car car = new Car("C001", "Toyota", 3000, 4);
+        Bike bike = new Bike("B001", "Honda", 1000, 150);
+        Truck truck = new Truck("T001", "Ford", 5000, 10);
 
         System.out.println("\n===== ABC Vehicle Rentals =====");
 
