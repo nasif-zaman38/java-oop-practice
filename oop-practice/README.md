@@ -120,6 +120,55 @@ Or run `Main.java` directly from IntelliJ IDEA.
 
 ---
 
+### 5. Vehicle Rental System
+
+**Task Name:** Vehicle Rental System
+
+**Task Objective:**  
+Build a console-based vehicle rental application where users can manage different types of vehicles and calculate rental costs based on the vehicle type.
+
+**Key Things Learned:**
+
+- Abstraction
+- Inheritance
+- Encapsulation
+- Constructors
+- Method Overriding
+- `super` Keyword
+- Static Variables and Methods
+- Abstract Classes
+
+**How to Run/Test:**
+
+```bash
+cd vrs
+mvn compile
+mvn exec:java
+````
+---
+### 6. Bank Account Management
+
+**Task Name:** Bank Account Management
+
+**Task Objective:**  
+Build a simple console-based banking application where users can view account information, deposit money, withdraw money and check their account balance.
+
+**Key Things Learned:**
+
+- Encapsulation
+- Access Modifiers
+- Constructors
+- Getters and Setters
+- Data Validation
+
+**How to Run/Test:**
+
+```bash
+cd BankAccount
+mvn compile
+mvn exec:java
+````
+---
 ## Technologies Used
 
 - Java
@@ -139,9 +188,13 @@ java-oop-practice/
 │
 ├── Calculator/
 │
-├── Employee-Management-System/
+├── ems/
 │
-├── Payment-Gateway/
+├── Payment/
+|
+├── vrs/ 
+|
+├── bams/
 │
 └── README.md
 ```
