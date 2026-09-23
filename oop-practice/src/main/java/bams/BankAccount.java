@@ -9,33 +9,48 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
 
-        if(balance < 0){
-            this.balance = 0;
-            System.out.println("Initial balance is invalid. Setting balance to 0.");
-        }
-        else {
-            this.balance = balance;
-        }
+        setBalance(balance);
+    }
+
+    BankAccount(){
+
     }
 
     public int getAccountNumber() {
         return accountNumber;
     }
 
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
     public String getAccountHolderName() {
         return accountHolderName;
+    }
+
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
     }
 
     public double getBalance() {
         return balance;
     }
 
+    public void setBalance(double balance) {
+        if(balance < 0){
+            this.balance = 0;
+            System.out.println("Initial balance is invalid. Setting balance to 0.");
+        }
+        else {
+            this.balance = balance;
+        }    }
+
     public void deposit(double amount){
         if(amount > 0){
+            balance += amount;
+
             System.out.println("\nDeposit successful.");
             System.out.println("Deposited amount: " + amount);
-
-            balance += amount;
             System.out.println("\nCurrent balance: " + balance);
         }
         else {
@@ -52,10 +67,10 @@ public class BankAccount {
 
         }
         else {
+            balance -= amount;
+
             System.out.println("\nWithdrawal successful.");
             System.out.println("Withdrawn amount: " + amount);
-
-            balance -= amount;
             System.out.println("\nCurrent balance: " + balance);
         }
     }
